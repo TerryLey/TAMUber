@@ -31,3 +31,9 @@ Driver.create([
 	{ name: "Scottie Payton" },
 	{ name: "Jerry  Griffin" },
 ])
+# Create an admin user.
+User.create!(name:  "Lee Sin",
+             email: "2065228154@qq.com",
+             password:              "123456",
+             password_confirmation: "123456",
+             admin: true)

@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_03_26_192810) do
     t.string "title"
     t.datetime "start"
     t.datetime "end"
+    t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "driver_id"
