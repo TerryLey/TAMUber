@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_26_192810) do
+ActiveRecord::Schema.define(version: 2019_11_14_175441) do
 
   create_table "drivers", force: :cascade do |t|
     t.string "name"
@@ -76,6 +76,9 @@ ActiveRecord::Schema.define(version: 2019_03_26_192810) do
     t.string "license"
     t.string "tel"
     t.string "address"
+    t.string "activation_digest"
+    t.boolean "activated", default: false
+    t.datetime "activated_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

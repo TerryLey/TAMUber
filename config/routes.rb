@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 	root  'onduties#index'
 	resources :vehicles, :drivers, :requests, :onduties, :alerts, :events, :schedules, :users
 	post 'onduties/update_car_pos' => 'onduties#update_car_pos', :as => :update_car_pos
+	resources :account_activations, only: [:edit]
 end
