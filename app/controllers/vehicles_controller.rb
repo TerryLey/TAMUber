@@ -6,9 +6,6 @@ class VehiclesController < ApplicationController
 		@vehicle = Vehicle.find params[:id]
 	end
 
-	def vehicle_params
-		params.require(:vehicle).permit(:name,:isAvailable)
-	end
 
 	def index
 		@vehicles = Vehicle.all
@@ -40,4 +37,10 @@ class VehiclesController < ApplicationController
 		flash[:notice] = "Vehicle #{@vehicle.name} was successfully deleted."
 		redirect_to vehicles_path
 	end
+	
+	private
+		def vehicle_params
+			params.require(:vehicle).permit(:name,:isAvailable, :tire_level,
+																			:battery_level, :fill_rate)
+		end
 end

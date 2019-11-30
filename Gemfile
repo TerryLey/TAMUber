@@ -42,6 +42,9 @@ gem 'bootstrap'
 # Access rails routes by javascript
 gem "js-routes"
 
+gem 'will_paginate',           '3.1.8'
+gem 'bootstrap-will_paginate', '1.0.0'
+
 
 group :development, :test do
 	# Call 'byebug' anywhere in the code to stop execution and get a debugger console
